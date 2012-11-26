@@ -1,6 +1,16 @@
 <?php
 // CONTROLADOR
+echo "<pre>Post: ";
+print_r($_POST);
+echo "</pre>";
 
+echo "<pre>Get: ";
+print_r($_GET);
+echo "</pre>";
+
+echo "<pre>Post: ";
+print_r($_FILES);
+echo "</pre>";
 require_once '../application/models/usersModel.php';
 require_once '../application/models/applicationModel.php';
 
@@ -17,10 +27,7 @@ else
 	$action='select';
 
 // Definir arrayUser
-$arrayUser = array();
-for ($i = 0; $i < 10; $i++) {
-	$arrayUser[$i] = null;
-}		
+$arrayUser = initArrayUser();		
 
 $usersText = "users.txt";
 

@@ -49,6 +49,8 @@ function uploadImage($_FILES)
 	
 	$destination = $uploadDirectory . "/" . $name;
 	move_uploaded_file($filename, $destination);
+	
+	return $name;
 }
 
 /**
@@ -61,6 +63,10 @@ function uploadImage($_FILES)
  */
 function writeToFile($imageName) 
 {
+	echo "<pre>Post: ";
+	print_r($_POST);
+	echo "</pre>";
+	die;
 	// Para cada elemento de $_POST, si el elemento es un array, hacer un implode
 	// separado por piles
 	foreach($_POST as $value) {
@@ -133,5 +139,14 @@ function readUser($id)
 {
 	$textUser = readUserFromFile($id);
 	$arrayUser = explode('|', $textUser);
+	return $arrayUser;
+}
+
+function initArrayUser()
+{
+	$arrayUser = array();
+	for ($i = 0; $i < 10; $i++) {
+		$arrayUser[$i] = null;
+	}
 	return $arrayUser;
 }

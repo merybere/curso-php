@@ -36,7 +36,7 @@
 			<li>
 				Mascotas:<select multiple name="pet[]">
 						<option value="cat" 
-							<?=(strpos($arrayUser[5], 'cat') === FALSE)?'':'selected'; ?> >
+							<?=(strpos($arrayUser[5],'cat') === FALSE)?'':'selected'; ?> >
 							Gato
 						</option>
 						<option value="dog"
@@ -90,14 +90,14 @@
 			<li>
 				Foto: <input type="file" name="photo"/>
 				<?php if(isset($arrayUser[10])):?>
-					<img src="uploads/<?=$arrayUser[11]; ?>" style="width:150px;"/>
+					<img src="uploads/<?=$arrayUser[10]; ?>" style="width:150px;"/>
 				<?php endif;?>
 			</li>
 			<li>
-				Submit: <input type="submit" name="submit"/>
+				Submit: <input type="submit" name="submit" value="Guardar"/>
 			</li>
 			<li>
-				Reset: <input type="reset" name="reset"/>
+				Reset: <input type="reset" name="reset" value ="Limpiar"/>
 			</li>
 		</ul>
 	</form>

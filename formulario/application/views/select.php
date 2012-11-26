@@ -2,7 +2,7 @@
 <a href="?action=insert">Agregar</a>
 
 <!-- Cabeceras de la tabla -->
-<table border=1>
+<table cellpadding=5 border=1 >
 	<tr>
 		<th>id</th>
 		<th>name</th>
@@ -11,10 +11,10 @@
 		<th>description</th>
 		<th>pet</th>
 		<th>city</th>
-		<th>coder</th>
+		<th>code</th>
 		<th>languajes</th>
-		<th>photo</th>
 		<th>submit</th>
+		<th>photo</th>
 		<th>action</th>
 	</tr>
 
