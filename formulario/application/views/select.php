@@ -37,7 +37,7 @@
 		     el número de línea en la que está el dato que se quiere cambiar -->
 		<a href="?action=update&id=<?= $key; ?>">Editar</a>
 		<!-- Añadir las anclas a borrar filas -->
-		<a href="?action=delete">Borrar</a>
+		<a href="?action=delete&id=<?= $key; ?>">Borrar</a>
 		</tr>
 	<?php endforeach;?>
 </table>
