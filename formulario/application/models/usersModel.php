@@ -23,9 +23,12 @@ echo "</pre>";
  */
 function uploadImage($_FILES, $uploadDirectory)
 {
+	// Si la imagen no existe, asignar como nombre una cadena vacía,
+	// para insertarla en el fichero de usuarios
+	if (!isset($_FILES['photo']['name']))
+		return $name = '';
 	
 	// Cargar una foto en uploads
-	//echo $uploadDirectory;
 	$destination = $uploadDirectory . "/" . $_FILES['photo']['name'];
 	
 	$filename = $_FILES['photo']['tmp_name'];
@@ -37,7 +40,8 @@ function uploadImage($_FILES, $uploadDirectory)
 	
 	$i = 0;
 	
-	while(in_array($name, scandir($uploadDirectory))) {
+	while(in_array($name, scandir($uploadDirectory))) 
+	{
 		$i++;
 		$name = $path_parts['filename'] . "_" . $i . "." . $path_parts['extension'];
 	}
@@ -55,22 +59,24 @@ function uploadImage($_FILES, $uploadDirectory)
  * por pipes (|) en una misma línea. Cada vez que se carguen datos nuevos en
  * el formulario, añadirlos al mismo fichero.
  * @param string $imageName Image name
+ * @param string $filename
  */
 function writeToFile($imageName, $filename) 
-{
-	
+{	
 	// Para cada elemento de $_POST, si el elemento es un array, hacer un implode
-	// separado por piles
-	foreach($_POST as $value) {
-		if(is_array($value)) {
+	// separado por pipes
+	foreach($_POST as $value) 
+	{
+		if(is_array($value)) 
+		{
 			// Convertir el array en una sola string, separada por comas
 			$value = implode(',', $value);
 		}
 		// Añadir cada valor a un vector
-		$arrayUser[]=$value;
+		$arrayUser[] = $value;
 	}
 	// Agregar la foto
-	$arrayUser[]=$imageName;
+	$arrayUser[] = $imageName;
 	
 	// Convertir el array con todos los datos a una sola línea separada por |
 	$textUser = implode('|', $arrayUser);
@@ -90,7 +96,8 @@ function readUsersFromFile($filename)
 {
 	
 	$arrayUsers = array();
-	if(file_exists($filename)) {
+	if(file_exists($filename)) 
+	{
 		// Extraer los datos de un fichero en un string
 		$usersText = file_get_contents($filename);
 	
@@ -119,6 +126,7 @@ function readUserFromFile($line, $filename)
 /**
  * Read user from file at a line position
  * @param int $id: line from file
+ * @param string $filename
  * @return array: User array
  */
 function readUser($id, $filename)
@@ -135,7 +143,8 @@ function readUser($id, $filename)
 function initArrayUser()
 {
 	$arrayUser = array();
-	for ($i = 0; $i < 10; $i++) {
+	for ($i = 0; $i < 10; $i++) 
+	{
 		$arrayUser[$i] = null;
 	}
 	return $arrayUser;
@@ -145,21 +154,32 @@ function initArrayUser()
  * Update the user at line id
  * @param string $imageName
  * @param int $id
+ * @param string $filename
  */
 function updateToFile($imageName, $id, $filename)
 {
 	$arrayUsers = readUsersFromFile($filename);
 	
-	foreach($_POST as $value) {
-		if(is_array($value)) {
+	foreach($_POST as $value) 
+	{
+		// Si alguno de los elementos del $_POST tiene varios elementos,
+		// convertirlo en una cadena separada por comas
+		if(is_array($value)) 
+		{
 			$value = implode(',', $value);
 		}
 		$arrayUser[] = $value;
 	}
+	// Añadir la imagen como último elemento del array de datos del usuario
 	$arrayUser[] = $imageName;
+	// Convertir el array de usuario en una cadena en la que cada elemento
+	// se separa con el carácter |
 	$textUser = implode('|', $arrayUser);
+	// Sustituir el usuario en la línea $id por la actualización
 	$arrayUsers[$id] = $textUser;
+	// Convertir el array de usuarios a cadena de texto
 	$textUsers = implode("\r\n", $arrayUsers);
+	// Volcar al fichero
 	file_put_contents($filename, $textUsers);
 }
 
@@ -167,6 +187,8 @@ function updateToFile($imageName, $id, $filename)
  * Update user image
  * @param array $_FILES Files array
  * @param int $id User id
+ * @param string $filename File with users
+ * @param $uploadDirectory location of the images
  * @return string: image
  */
 function updateImage($_FILES, $id, $filename, $uploadDirectory)
@@ -177,7 +199,8 @@ function updateImage($_FILES, $id, $filename, $uploadDirectory)
 	$filename = $arrayUser[10];
 	// Si _FILES trae una imagen nueva, borrar la que ya hay y sobreescribir
 	// si no hay nada, no se toca el fichero
-	if (isset($_FILES['photo']['name'])) {
+	if (isset($_FILES['photo']['name'])) 
+	{
 		deleteImage($filename, $uploadDirectory);
 		// Subir nueva imagen
 		$filename = uploadImage($_FILES, $uploadDirectory);

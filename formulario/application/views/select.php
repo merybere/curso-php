@@ -1,4 +1,7 @@
 <!-- Añadir el ancla a agregar un nuevo elemento a través del formulario -->
+<?php 
+$arrayUsers = $params['arrayUsers'];
+?>
 <a href="?action=insert">Agregar</a>
 
 <!-- Cabeceras de la tabla -->
