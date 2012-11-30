@@ -5,7 +5,7 @@ $arrayUsers = $params['arrayUsers'];
 <a href="?action=insert">Agregar</a>
 
 <!-- Cabeceras de la tabla -->
-<table cellpadding=5 border=1 >
+<table>
 	<tr>
 		<th>id</th>
 		<th>name</th>
@@ -17,7 +17,6 @@ $arrayUsers = $params['arrayUsers'];
 		<th>city</th>
 		<th>pet</th>
 		<th>languajes</th>
-		<th>submit</th>
 		<th>action</th>
 	</tr>
 
@@ -38,9 +37,9 @@ $arrayUsers = $params['arrayUsers'];
 		<td>
 		<!-- Añadir las anclas a editar filas. Para editar una fila, necesitas
 		     el número de línea en la que está el dato que se quiere cambiar -->
-		<a href="?action=update&id=<?= $key; ?>">Editar</a>
+		<a href="?action=update&id=<?= $user['iduser']; ?>">Editar</a>
 		<!-- Añadir las anclas a borrar filas -->
-		<a href="?action=delete&id=<?= $key; ?>">Borrar</a>
+		<a href="?action=delete&id=<?= $user['iduser']; ?>">Borrar</a>
 		</tr>
 	<?php endforeach;?>
 </table>

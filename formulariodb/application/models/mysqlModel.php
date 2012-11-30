@@ -47,25 +47,37 @@ function disconnect($cnx)
 
 /**
  * 
- * @param unknown_type $cnx
- * @param unknown_type $sql
- * @return unknown
+ * @param string $sql
+ * @param context $cnx
+ * @throws Exception
+ * @return int: number or affected rows
+ *         multitype: array of multitype array rows sql result
  */
 function query($sql, $cnx)
 {
 	try 
 	{
 		$result = mysql_query($sql, $cnx);
+		
 		if (!$result)
 		{
 			throw new Exception('MySQL Query Error: ' . mysql_error()); 
 		}
 		else
 		{
-			// $result es un record
-			while($row = mysql_fetch_array($result, MYSQL_ASSOC))
+			_debug($result);
+			if ($result == TRUE)
 			{
-				$arrayData[] = $row;
+				return mysql_affected_rows($cnx);
+			}
+			else 
+			{
+				_debug($result);
+				// $result es un record
+				while($row = mysql_fetch_array($result, MYSQL_ASSOC))
+				{
+					$arrayData[] = $row;
+				}
 			}
 		}
 	}

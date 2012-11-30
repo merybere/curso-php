@@ -53,7 +53,8 @@ switch ($action)
 		else 	// Si no hay post, mostrar el formulario
 		{	
 			//Leer los datos del usuario
-			$arrayUser = readUser($_GET['id'], $config['filename']);
+			//$arrayUser = readUser($_GET['id'], $config['filename']);
+			$arrayUser = readUser($_GET['id'], $cnx);
 			
 			// Mostrar el formulario vacío
 			//include("../application/views/formulario.php");

@@ -196,7 +196,7 @@ function updateImage($_FILES, $id, $filename, $uploadDirectory)
 	$arrayUser = readUser($id, $filename);
 	// La imagen es el último elemento del array
 	
-	$filename = $arrayUser[10];
+	$filename = $arrayUser['photo'];
 	// Si _FILES trae una imagen nueva, borrar la que ya hay y sobreescribir
 	// si no hay nada, no se toca el fichero
 	if (isset($_FILES['photo']['name'])) 
