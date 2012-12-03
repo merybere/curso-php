@@ -145,5 +145,6 @@ function checkWinner($filename)
 
 function resetGame($filename)
 {
-	unlink($filename);
+	if (file_exists($filename))
+		unlink($filename);
 }

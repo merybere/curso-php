@@ -26,7 +26,7 @@ if (isset($_GET['action']))
 	$action=$_GET['action'];
 else
 	// Acción por defecto
-	$action='select';
+	$action='tablero';
 
 // Switch para tratar las posibles acciones. 
 switch ($action)
@@ -38,7 +38,7 @@ switch ($action)
 			$win = checkWinner($config['filename']);
 			if ($win <> '_')
 			{
-				header("Location: tresenraya.php?action=winner&win=" . $win);
+				header("Location: tresenraya.php?action=tablero&win=" . $win);
 				exit();
 			}
 			
@@ -46,43 +46,46 @@ switch ($action)
 			$win = checkWinner($config['filename']);
 			if ($win <> '_')
 			{
-				header("Location: tresenraya.php?action=winner&win=" . $win);
+				header("Location: tresenraya.php?action=tablero&win=" . $win);
 				exit();
 			}
 			
-			header("Location: tresenraya.php?action=select");
+			header("Location: tresenraya.php?action=tablero");
 			exit();
 		}
 		break;	
-	case 'winner':
+
+	case 'tablero':	// Mostrar la tabla (url + ?action=select)
 		if ($_POST)
 		{
 			if($_POST['submit'] == "Play again")
 			{
-				die('lalala');
-				resetGame($config[filename]);
-				header("Location: tresenraya.php?action=select");
+				resetGame($config['filename']);
+				header("Location: tresenraya.php?action=tablero");
 				exit();
 			}
 		}
 		else 
 		{
-			$params = array('win' => $_GET['win']);
-			include("../application/views/winner.php");
-		}
-		break;
-	case 'select':	// Mostrar la tabla (url + ?action=select)
-		if (file_exists($config['filename']))
-			$arrayGame = readGameFromFile($config['filename']);
-		else
-		{
-			$arrayGame = initArrayGame();
-			writeToFile($arrayGame, $config['filename']);
-		}
+			if (file_exists($config['filename']))
+			{
+				$arrayGame = readGameFromFile($config['filename']);
+			}
+			else
+			{
+				$arrayGame = initArrayGame();
+				writeToFile($arrayGame, $config['filename']);
+			}
 
-		$params = array('arrayGame' => $arrayGame);
-		include("../application/views/select.php");
+			if (isset($_GET['win']))
+				$win = $_GET['win'];
+			else
+				$win = '_';
+			$params = array('arrayGame' => $arrayGame, 'win' => $win);
+			include("../application/views/tablero.php");
+		}
 		break;		
+		
 	default:
 		break;
 }
