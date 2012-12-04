@@ -41,7 +41,7 @@
 	<!-- Menu -->
 	<div id="menu" class="box">
 
-	<?php include '../application/layouts/partials/menu.php';?>
+	<?php include '../application/layouts/partials/menu_front.php';?>
 
 	</div> <!-- /menu -->
 
@@ -62,7 +62,7 @@
 		<!-- Content (Right Column) -->
 		<div id="content" class="box">
 
-		<?= $params['content'];?>
+		<?= $content;?>
 		<?php //include '../application/layouts/partials/content.php';?>
 
 		</div> <!-- /content -->
