@@ -25,11 +25,13 @@ $winner = $params['win'];
 			$casillas = explode("|", $arrayGame[$i]);
 			for ($j=0; $j < 3; $j++):
 			?>
-				<td>
-				<!-- short tag para hacer un echo -->
+				<td align="center" height="20">
+				<?php if($casillas[$j] == '_' && $winner == '_'):?>
 				<a href="?action=update&row=<?= $i; ?>&col=<?= $j; ?>">
 					<?= $casillas[$j]; ?>
 				</a>
+				<?php else: echo $casillas[$j];?>
+				<?php endif;?>
 				</td>
 			<?php endfor;?>
 			</tr>
