@@ -72,7 +72,6 @@ function query($sql, $cnx)
 			}
 			else 
 			{
-				_debug($result);
 				// $result es un record
 				while($row = mysql_fetch_array($result, MYSQL_ASSOC))
 				{

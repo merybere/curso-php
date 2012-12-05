@@ -11,7 +11,13 @@ function readUsers($cnx)
 			FROM users
 			INNER JOIN cities ON
 				cities.idcity = users.cities_idcity;";
+	
 	$arrayUsers = query($sql, $cnx);
+	
+	// Si la query devuelve 0 quiere decir que no hay resultados de la query
+	// Crear un array vacío para devolver en ese caso
+	if ($arrayUsers == 0)
+		$arrayUsers = array();
 	
 	for ($i = 0; $i < count($arrayUsers); $i++)
 	{
