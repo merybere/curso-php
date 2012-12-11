@@ -67,5 +67,10 @@ class Application_bootstrap
 	public function run()
 	{
 		include("../application/controllers/" . $this->request['controller'] . ".php");
+		// Instanciamos el controller
+		$class = $this->request['controller'] . "Controller";
+		$method = $this->request['action'] . "Action";
+		$obj = new $class($this->config);
+		$obj->$method();
 	}
 }
