@@ -1,42 +1,24 @@
 <?php
-$this->title = "My Languages";
+$this->title = "My Language";
 $this->headTitle($this->title);
 ?>
-<p>
-    <a
-        href="<?php
-        
-		echo $this->url(array(
-                'controller' => 'language',
-                'action' => 'add'
-        ));
-        ?>">Add new language</a>
-</p>
+<p><a href="<?php echo $this->url(array('controller'=>'language',
+'action'=>'add'));?>">Add new language</a></p>
 <table>
-    <tr>
-        <th>Language</th>
-        <th>&nbsp;</th>
-    </tr>
+<tr>
+<th>Title</th>
+<th>Artist</th>
+<th>&nbsp;</th>
+</tr>
 <?php foreach($this->languages as $language) : ?>
 <tr>
-        <td><?php echo $this->escape($language->language);?></td>
-        <td><a
-            href="<?php
-    
-			echo $this->url(
-            array(
-                    'controller' => 'language',
-                    'action' => 'edit',
-                    'idlanguage' => $language->idlanguage
-            ));
-    ?>">Edit</a> <a
-            href="<?php
-    
-			echo $this->url(
-            array(
-                    'controller' => 'language',
-                    'action'=>'delete', 
-					'idlanguage'=>$language->idlanguage));?>">Delete</a></td>
-    </tr>
+<td><?php echo $this->escape($language->language);?></td>
+<td>
+<a href="<?php echo $this->url(array('controller'=>'language',
+'action'=>'edit', 'idlanguage'=>$language->idlanguage));?>">Edit</a>
+<a href="<?php echo $this->url(array('controller'=>'language',
+'action'=>'delete', 'idlanguage'=>$language->idlanguage));?>">Delete</a>
+</td>
+</tr>
 <?php endforeach; ?>
 </table>

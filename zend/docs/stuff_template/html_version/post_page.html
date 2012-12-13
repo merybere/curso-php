@@ -1,0 +1,663 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+
+  <!-- BEGIN HEAD -->
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <!-- BEGIN CONFIGURATION -->
+    <title>Stuff</title>                      <!-- site title -->
+    <style type="text/css">
+      #menu { width: 250px; }                 /* left menu section width */
+      #content { left: 250px; }               /* space between left edge of the browser's window and content (it should be equal or bigger then menu section width) */
+    </style>
+    <script type="text/javascript">
+      stuff_config = {
+        middlePoint: 310,                     // distance from page top to post thumbnail's center
+        portfolioGalleryChangeEffect: 'fade', // portfolio's gallery transition effect (sliceDown, sliceDownLeft, sliceUp, sliceUpLeft, sliceUpDown, sliceUpDownLeft, fold, fade, random)
+        portfolioGalleryChangeSpeed: 150,     // transition speed
+        portfolioGalleryNavOnHover: true,     // show navigation arrows only for mouse hover
+        columnSupport: true,                  // content coulmns creating
+        columnPageChangeSpeed: 'normal',      // change page animation speed (fast, normal, slow)
+        mouseWheelSupport: true               // support for horizontal mouse scrolling
+      }
+    </script>
+    <!-- END CONFIGURATION -->
+
+    <link rel="profile" href="http://gmpg.org/xfn/11" />
+    <link rel="stylesheet" type="text/css" media="all" href="style.min.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="schemes/bright-blue/style.css" />
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="ie7.min.css" type="text/css" media="screen" />
+    <![endif]-->
+    <link rel="icon" type="image/png" href="schemes/bright-blue/images/favicon.png" />
+    <script type="text/javascript" src="schemes/bright-blue/style.js"></script>
+    <!-- Java Scripts used in the template - not combined version.
+         Delete this code section if you don't need that. -->
+    <!--
+    <script type="text/javascript" src="js/scripts/jquery-1.4.4.min.js"></script>
+    <script type="text/javascript" src="js/scripts/jquery.nivo.slider.pack.js"></script>
+    <script type="text/javascript" src="js/scripts/jquery.fancybox-1.3.4.pack.js"></script>
+    <script type="text/javascript" src="js/scripts/autocolumn.min.js"></script>
+    <script type="text/javascript" src="js/scripts/cufon-yui.js"></script>
+    <script type="text/javascript" src="js/scripts/league_gothic.font.js"></script>
+    <script type="text/javascript" src="js/scripts/stuff.js"></script>
+    -->
+    <script type="text/javascript" src="js/stuff.allinone.min.js"></script>
+  </head>
+  <!-- END HEAD -->
+
+  <!-- BEGIN BODY -->
+  <body>
+
+    <!-- BEGIN IMAGE PRELOADER -->
+    <div id="image-preloader">
+      <div class="search-background"></div>
+      <div class="search-submit"></div>
+      <div class="loader"></div>
+    </div>
+    <!-- END IMAGE PRELOADER -->
+
+    <!-- BEGIN BROWSER NOTIFICATION -->
+    <div class="browser-notification ie6">
+      <div class="text">
+        Your browser (Internet Explorer 6) is <strong>out of date</strong>. It has known <strong>security flaws</strong> and may <strong>not display all features</strong> of this and other websites. <a href="http://www.browser-update.org/update.html">Learn how to update your browser</a>.
+      </div>
+      <div class="close">X</div>
+    </div>
+    <noscript>
+      <div class="browser-notification js">
+        <div class="text">
+          Your browser does not support JavaScript, or you do not have it enabled. <strong>Please enable JavaScript</strong> or the site will not work properly.
+        </div>
+      </div>
+    </noscript>
+    <!-- END BROWSER NOTIFICATION -->
+
+    <!-- BEGIN WRAPPER -->
+    <div id="wrapper">
+
+      <!-- BEGIN MENU -->
+      <div id="menu">
+
+        <!-- BEGIN MASK -->
+        <div class="mask"></div>
+        <!-- END MASK -->
+
+        <!-- BEGIN SOCIAL MEDIA -->
+        <ul id="social-media">
+          <li><a href="#null" title="Flickr"><img src="images/socialmedia/white/flickr.png" alt="" /></a></li>
+          <li><a href="#null" title="Twitter"><img src="images/socialmedia/white/twitter.png" alt="" /></a></li>
+          <li><a href="#null" title="Facebook"><img src="images/socialmedia/white/facebook.png" alt="" /></a></li>
+          <li><a href="#null" title="LinkedIn"><img src="images/socialmedia/white/linkedin.png" alt="" /></a></li>
+        </ul>
+        <!-- END SOCIAL MEDIA -->
+
+        <!-- BEGIN CONTAINER -->
+        <div class="container">
+
+          <!-- BEGIN LOGO -->
+          <div id="logo" class="arrow">
+            <div class="image">
+              <img src="schemes/bright-blue/images/logo.png" alt="Stuff" width="137" height="67" />
+            </div>
+            <a href="index.html" title="Stuff" class="mask"></a>
+          </div>
+          <!-- END LOGO -->
+
+          <!-- BEGIN NAVIGATION MENU -->
+          <div id="nav-menu">
+            <div class="arrow up"><div></div></div>
+            <div class="container">
+              <ul>
+                <li><a href="custom_page.html" title="Page">Page</a></li>
+                <li><a href="three_column_page.html" title="3 columns">3 columns</a></li>
+                <li><a href="portfolio_big.html" title="Portfolio XL">Portfolio XL</a></li>
+                <li><a href="portfolio_small.html" title="Portfolio M">Portfolio M</a></li>
+                <li><a href="contact.html" title="Contact">Contact</a></li>
+                <li class="search">
+                  <a title="Search">Search</a><br />
+                  <form action="search.html" method="post">
+                    <div>
+                      <input type="text" name="s" />
+                      <input type="submit" value="" />
+                    </div>
+                  </form>
+                </li>
+              </ul>
+            </div>
+            <div class="arrow down"><div></div></div>
+          </div>
+          <!-- END NAVIGATION MENU -->
+
+        </div>
+        <!-- END CONTAINER -->
+
+      </div>
+      <!-- END MENU -->
+
+      <!-- BEGIN CONTENT -->
+      <div id="content">
+
+        <!-- BEGIN POST PAGE -->
+        <div class="box wide high">
+          <div class="container">
+            <div class="meta">
+              <p class="comments-count"><span>25</span> comments</p>
+              <p class="author"><a href="#null" title="kubasto">kubasto</a></p>
+              <p>Category one, Category two</p>
+              <p>First tag, Second tag</p>
+              <p>September 20, 2010</p>
+            </div>
+            <div class="title">
+              <h2>Example post page of the blog</h2>
+            </div>
+            <div class="excerpt">
+              <p>Tantas utinam ad&nbsp;pro, vix quidam docendi ut. Id&nbsp;diceret ornatus appetere sea, vitae explicari coptam cum ne. No&nbsp;sed denique mnesarchum, sed ne&nbsp;hrefmollis iudicabit theophrastus, cu&nbsp;mei graeci discere impedit. Praesent tincidunt sit amet tellus.</p>
+            </div>
+            <div class="content">
+              <div class="columns two">
+                <p>Consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et&nbsp;magnis dis parturient montes, nascetur ridiculus mus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</p>
+                <h4>Vivamus elementum semper nisi</h4>
+                <p>Phasellus viverra nulla ut&nbsp;metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies. Maecenas tempus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et&nbsp;ante tincidunt tempus.</p>
+                <ul>
+                  <li>faucibus orci luctus</li>
+                  <li>praesent adipiscing</li>
+                  <li>consectetuer eget posuere</li>
+                  <li>sagittis vestibulum</li>
+                </ul>
+                <p>Donec vitae sapien ut&nbsp;libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi&nbsp;a&nbsp;libero.</p>
+                <hr />
+                <p>Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam accumsan lorem in&nbsp;dui. Cras ultricies mi&nbsp;eu&nbsp;turpis hendrerit fringilla. Vestibulum ante ipsum primis in&nbsp;faucibus orci luctus et&nbsp;ultrices posuere cubilia Curae; In&nbsp;ac dui quis mi&nbsp;consectetuer lacinia. Nam pretium turpis et&nbsp;arcu. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum.</p>
+                <h4>Integer ante arcu</h4>
+                <p>Sed aliquam ultrices mauris. Integer ante arcu, accumsa, consectetuer eget, posuere ut, mauris. Praesent adipiscing. Phasellus ullamcorper ipsum rutrum nunc. Nunc nonummy metus. Vestibulum volutpat pretium libero. Cras id&nbsp;dui. Phasellus nec sem in&nbsp;justo pellentesque facilisis.</p>
+                <img src="content/post1.jpg" alt="" width="338" height="215" />
+                <p>Etiam imperdiet imperdiet orci. Nunc nec neque. Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi. Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. Maecenas malesuada. Praesent congue erat at&nbsp;massa. Sed cursus turpis vitae tortor. Donec posuere vulputate arcu. Phasellus accumsan cursus velit. Vestibulum ante ipsum primis in&nbsp;faucibus orci luctus et&nbsp;ultrices posuere cubilia Curae; Sed aliquam, nisi quis porttitor congue, elit erat euismod orci, ac&nbsp;placerat dolor lectus quis orci. Phasellus consectetuer vestibulum elit. Aenean tellus metus, bibendum sed, posuere ac, mattis non, nunc. Vestibulum fringilla pede sit amet augue. In&nbsp;turpis. Pellentesque quest posuere. Praesent turpis.</p>
+                <p>Aenean posuere, tortor sedrate cursus feugiat, nunc augue blandit nunc, eu&nbsp;sollicitudinex urna dolor sagittis lacus. Donec elit libero, sodales nec, volutpat a, suscipit non, turpis. Nullam sagittis. Suspendisse pulvinar, augue ac&nbsp;venenatis condimentum, sem libero volutpat nibh, nec pellentesque velit pede quis nunc. Vestibulum ante ipsum primis in&nbsp;faucibus orci luctus et&nbsp;ultrices posuere cubilia Curae; Fusce id&nbsp;purus.</p>
+                <img src="content/post2.jpg" alt="" width="338" height="210" />
+                <p>Ut varius tincidunt libero. Phasellus dolor. Maecenas vestibulum mollis diam. Pellentesque ut&nbsp;neque. Pellentesque habitant morbi tristique senectus et&nbsp;netus et&nbsp;malesuada fames ac&nbsp;turpis egestas. Intedndus dui magna, posuere eget, vestibulum et, tempor auctor, justo. In&nbsp;ac felis quis tortor malesuada pretium. Pellentesque auctor neque nec urna. Proin sapien ipsum, porta a, auctor quis, euismod ut, mi. Aenean viverra rhoncus pede. Pellentesque habitant morbi tristique senectus et&nbsp;netus et&nbsp;malesuada fames ac&nbsp;turpis egestas. Ut&nbsp;non enim eleifend felis pretium feugiat.</p>
+                <hr />
+                <p>Vivamus quis mi. Phasellus a&nbsp;est. Phasellus magna. In&nbsp;hac habitasse platea dictumst. Curabitur at&nbsp;lacus ac&nbsp;velit ornare lobortis. Curabitur a&nbsp;felis in&nbsp;nunc fringilla tristique. Morbi mattis ullamcorper velit. Phasellus gravida semper nisi. Nullam vel sem. Pellentesque libero tortor, tincidunt et, tincidunt eget, semper nec, quam. Sed hendrerit. Morbi ac&nbsp;felis. Nunc egestas, augue at&nbsp;pellentesque laoreet, felis eros vehicula leo, at&nbsp;malesuada velit leo quis pede. Donec interdum, metus et&nbsp;hendrerit aliquet, dolor diam sagittis ligula, eget egestas libero turpis vel mi. Nunc nulla. Fusce risus nisl, viverra et, tempor et, pretium in, sapien. Donec venenatis vulputate lorem. Morbi nec metus. Phasellus blandit leo ut&nbsp;odio. Maecenas ullamcorper, dui et&nbsp;placerat feugiat, eros pede varius nisi, condimentum viverra felis nunc et&nbsp;lorem.</p>
+                <hr />
+                <p>Sed magna purus, fermentum eu, tincidunt eu, varius ut, felis. In&nbsp;auctor lobortis lacus. Quisque libero metus, condimentum nec, tempor a, commodo mollis, magna. Vestibulum ullamcorper mauris at&nbsp;ligula. Fusce fermentum. Nullam cursus lacinia erat. Praesent blandit laoreet nibh. Fusce convallis metus id&nbsp;felis luctus adipiscing. Pellentesque egestas, neque sit amet convallis pulvinar, justo nulla eleifend augue, ac&nbsp;auctor orci leo non est. Quisque id&nbsp;mi. Ut&nbsp;tincidunt tincidunt erat. Etiam feugiat lorem non metus. Vestibulum dapibus nunc ac&nbsp;augue. Curabitur vestibulum aliquam leo. Praesent egestas neque eu&nbsp;enim. In&nbsp;hac habitasse platea dictumst. Fusce a&nbsp;quam. Etiam ut&nbsp;purus mattis mauris.</p>
+                <p>Varius tincidunt libero. Phasellus dolor. Maecenas vestibulum mollis diam. Pellentesque ut&nbsp;nequemente. Pellentesque habitant morbi tristique senectus et&nbsp;netuset malesuada fames ac&nbsp;turpis egestas. In&nbsp;dui magna, posuere eget, vestibulum et, tempor auctor, justo. In&nbsp;ac felis quis tortor malesuada pretium. Pellentesque auctor neque nec urna. Proin sapien ipsum, porta a, auctor quis, euismod ut, mi. Aenean viverra rhoncus pede. Pellentesque habitant morbi tristique senectus et&nbsp;netus et&nbsp;malesuada fames ac&nbsp;turpis egestas. Ut&nbsp;non enim eleifend felis pretium feugiat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et&nbsp;magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In&nbsp;enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu&nbsp;pede mollis pretium. Integer tincidunt. </p>
+                <h4>Phasellus viverra nulla ut&nbsp;metus</h4>
+                <p>Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut&nbsp;metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et&nbsp;ante tincidunt tempus. Donec vitae sapien ut&nbsp;libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc.</p>
+                <p>Pellentesque habitant morbi tristique senectus et&nbsp;netus et&nbsp;malesuada fames ac&nbsp;turpis egestas. Ut&nbsp;non enim eleifend felis pretium feugiat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et&nbsp;magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In&nbsp;enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut&nbsp;metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et&nbsp;ante tincidunt tempus. Donec vitae sapien ut&nbsp;libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales.</p>
+              </div>
+            </div>
+            <div class="nav-page">
+              <a title="Previous" class="prev">&lt; Prev</a>
+              <span class="pages"></span>
+              <a title="Next" class="next">Next &gt;</a>
+            </div>
+          </div>
+        </div>
+        <!-- END POST PAGE -->
+        
+        <!-- BEGIN COMMENTS -->
+        <div id="comments">
+          <ul class="list">
+            <li class="comment">
+              <div class="top"><div></div></div>
+              <div class="middle">
+                <div class="content">
+                  <p>Nam scelerisque justo a&nbsp;leo nec justo vel neque vel nulla. Proin lacus. Duis sed fermentum erat. Fusce non orci. Nam consectetuer adipiscing at, egestas consequat lacus ipsum non purus.</p>
+                </div>
+                <div class="tools">
+                  <a href="#null">quote</a> |
+                  <a href="#null">reply</a>
+                </div>
+                <div class="meta">
+                  <p class="author"><a href="#null" title="nickname surname">nickname surname</a></p>
+                  <p class="timestamp">22:13<br />11/08/2010</p>
+                </div>
+              </div>
+              <div class="bottom"><div></div></div>
+            </li>
+            <li class="comment">
+              <div class="top"><div></div></div>
+              <div class="middle">
+                <div class="content">
+                  <p>Vivamus fermentum eget, congue et, nonummy sed, urna. Donec iaculis. Nam dolor sit amet, accumsan ullamcorper massa et&nbsp;ultrices posuere sit amet nunc.</p>
+                </div>
+                <div class="tools">
+                  <a href="#null">quote</a> |
+                  <a href="#null">reply</a>
+                </div>
+                <div class="meta">
+                  <img src="schemes/bright-blue/images/avatar.png" alt="" class="avatar" />
+                  <p class="author"><a href="#null" title="somebody">somebody</a></p>
+                  <p class="timestamp">08:45<br />12/08/2010</p>
+                </div>
+              </div>
+              <div class="bottom"><div></div></div>
+            </li>
+            <li class="comment level-1">
+              <div class="top"><div></div></div>
+              <div class="middle">
+                <div class="content">
+                  <p>Vivamus fermentum eget, congue et, nonummy sed, urna. Aliquam nec elit arcu, pellentesque.</p>
+                </div>
+                <div class="tools">
+                  <a href="#null">quote</a> |
+                  <a href="#null">reply</a>
+                </div>
+                <div class="meta">
+                  <p class="author"><a href="#null" title="nickname">nickname</a></p>
+                  <p class="timestamp">23:18<br />13/08/2010</p>
+                </div>
+              </div>
+              <div class="bottom"><div></div></div>
+            </li>
+            <li class="comment level-2">
+              <div class="top"><div></div></div>
+              <div class="middle">
+                <div class="content">
+                  <p>Sed diam tempor ac, augue. Nulla gravida eros sagittis odio id&nbsp;sapien vitae purus. Aenean ac&nbsp;massa nec magna.</p>
+                </div>
+                <div class="tools">
+                  <a href="#null">quote</a> |
+                  <a href="#null">reply</a>
+                </div>
+                <div class="meta">
+                  <p class="author"><a href="#null" title="nickname surname">nickname surname</a></p>
+                  <p class="timestamp">21:28<br />14/08/2010</p>
+                </div>
+              </div>
+              <div class="bottom"><div></div></div>
+            </li>
+            <li class="comment">
+              <div class="top"><div></div></div>
+              <div class="middle">
+                <div class="content">
+                  <p>Curabitur nec velit eleifend et, faucibus orci quis tortor.</p>
+                </div>
+                <div class="tools">
+                  <a href="#null">quote</a> |
+                  <a href="#null">reply</a>
+                </div>
+                <div class="meta">
+                  <p class="author"><a href="#null" title="nickname surname">nickname surname</a></p>
+                  <p class="timestamp">03:20<br />15/08/2010</p>
+                </div>
+              </div>
+              <div class="bottom"><div></div></div>
+            </li>
+            <li class="comment">
+              <div class="top"><div></div></div>
+              <div class="middle">
+                <div class="content">
+                  <p>Curabitur nec velit eleifend et, faucibus orci quis tortor.</p>
+                </div>
+                <div class="tools">
+                  <a href="#null">quote</a> |
+                  <a href="#null">reply</a>
+                </div>
+                <div class="meta">
+                  <p class="author"><a href="#null" title="kubasto">kubasto</a></p>
+                  <p class="timestamp">05:43<br />16/08/2010</p>
+                </div>
+              </div>
+              <div class="bottom"><div></div></div>
+            </li>
+            <li class="comment">
+              <div class="top"><div></div></div>
+              <div class="middle">
+                <div class="content">
+                  <p>Vivamus fermentum eget, congue et, nonummy sed, urna. Sed diam tempor ac, augue. Nulla gravida eros sagittis odio id&nbsp;sapien vitae purus.</p>
+                </div>
+                <div class="tools">
+                  <a href="#null">quote</a> |
+                  <a href="#null">reply</a>
+                </div>
+                <div class="meta">
+                  <img src="schemes/bright-blue/images/avatar.png" alt="" class="avatar" />
+                  <p class="author"><a href="#null" title="author">author</a></p>
+                  <p class="timestamp">22:01<br />17/08/2010</p>
+                </div>
+              </div>
+              <div class="bottom"><div></div></div>
+            </li>
+            <li class="comment">
+              <div class="top"><div></div></div>
+              <div class="middle">
+                <div class="content">
+                  <blockquote><p>Donec iaculis. Nam dolor sit amet, accumsan ullamcorper massa et&nbsp;ultrices posuere sit amet nunc. Nulla vitae metus. Curabitur fringilla viverra.</p></blockquote><p>Nunc a&nbsp;urna. Vestibulum nibh. Aliquam nec elit arcu, pellentesque ipsum primis in&nbsp;quam nulla, at&nbsp;lorem.</p>
+                </div>
+                <div class="tools">
+                  <a href="#null">quote</a> |
+                  <a href="#null">reply</a>
+                </div>
+                <div class="meta">
+                  <p class="author"><a href="#null" title="kubasto">kubasto</a></p>
+                  <p class="timestamp">12:05<br />18/08/2010</p>
+                </div>
+              </div>
+              <div class="bottom"><div></div></div>
+            </li>
+            <li class="comment">
+              <div class="top"><div></div></div>
+              <div class="middle">
+                <div class="content">
+                  <p>Aenean bibendum vel, semper orci, gravida vitae, placerat ornare a, mauris. Praesent justo. Nulla malesuada.</p>
+                </div>
+                <div class="tools">
+                  <a href="#null">quote</a> |
+                  <a href="#null">reply</a>
+                </div>
+                <div class="meta">
+                  <p class="author"><a href="#null" title="nickname">nickname</a></p>
+                  <p class="timestamp">17:30<br />19/08/2010</p>
+                </div>
+              </div>
+              <div class="bottom"><div></div></div>
+            </li>
+            <li class="comment">
+              <div class="top"><div></div></div>
+              <div class="middle">
+                <div class="content">
+                  <p>Sed diam tempor ac, augue. Nulla gravida eros sagittis odio id&nbsp;sapien vitae purus. Aenean ac&nbsp;massa nec magna.</p>
+                </div>
+                <div class="tools">
+                  <a href="#null">quote</a> |
+                  <a href="#null">reply</a>
+                </div>
+                <div class="meta">
+                  <img src="schemes/bright-blue/images/avatar.png" alt="" class="avatar" />
+                  <p class="author"><a href="#null" title="nickname">nickname</a></p>
+                  <p class="timestamp">14:20<br />20/08/2010</p>
+                </div>
+              </div>
+              <div class="bottom"><div></div></div>
+            </li>
+            <li class="comment">
+              <div class="top"><div></div></div>
+              <div class="middle">
+                <div class="content">
+                  <p>Nam scelerisque justo a&nbsp;leo nec justo vel neque vel nulla. Proin lacus. Duis sed fermentum erat. Fusce non orci. Nam consectetuer adipiscing at, egestas consequat lacus ipsum non purus.</p>
+                </div>
+                <div class="tools">
+                  <a href="#null">quote</a> |
+                  <a href="#null">reply</a>
+                </div>
+                <div class="meta">
+                  <img src="schemes/bright-blue/images/avatar.png" alt="" class="avatar" />
+                  <p class="author"><a href="#null" title="kubasto">kubasto</a></p>
+                  <p class="timestamp">08:03<br />21/08/2010</p>
+                </div>
+              </div>
+              <div class="bottom"><div></div></div>
+            </li>
+            <li class="comment">
+              <div class="top"><div></div></div>
+              <div class="middle">
+                <div class="content">
+                  <p>Donec iaculis. Nam dolor sit amet, accumsan ullamcorper massa et&nbsp;ultrices posuere sit amet nunc. Nulla vitae metus. Curabitur fringilla viverra.</p>
+                </div>
+                <div class="tools">
+                  <a href="#null">quote</a> |
+                  <a href="#null">reply</a>
+                </div>
+                <div class="meta">
+                  <p class="author"><a href="#null" title="nickname surname">nickname surname</a></p>
+                  <p class="timestamp">18:11<br />22/08/2010</p>
+                </div>
+              </div>
+              <div class="bottom"><div></div></div>
+            </li>
+            <li class="comment">
+              <div class="top"><div></div></div>
+              <div class="middle">
+                <div class="content">
+                  <p>Vivamus fermentum eget, congue et, nonummy sed, urna.</p><p>Curabitur nec velit eleifend et, faucibus orci quis tortor.</p><p>Lorem ipsum dolor sit amet quam et&nbsp;cursus magna. Integer eu&nbsp;eros. Maecenas blandit suscipit, velit sit.</p>
+                </div>
+                <div class="tools">
+                  <a href="#null">quote</a> |
+                  <a href="#null">reply</a>
+                </div>
+                <div class="meta">
+                  <img src="schemes/bright-blue/images/avatar.png" alt="" class="avatar" />
+                  <p class="author"><a href="#null" title="nickname">nickname</a></p>
+                  <p class="timestamp">00:24<br />23/08/2010</p>
+                </div>
+              </div>
+              <div class="bottom"><div></div></div>
+            </li>
+            <li class="comment">
+              <div class="top"><div></div></div>
+              <div class="middle">
+                <div class="content">
+                  <p>Curabitur nec velit eleifend et, faucibus orci quis tortor.</p><p>Vivamus fermentum eget, congue et, nonummy sed, urna.</p><p>Aenean bibendum vel, semper orci, gravida vitae, placerat ornare a, mauris. Praesent justo. Nulla malesuada.</p><p>Sed diam tempor ac, augue. Nulla gravida eros sagittis odio id&nbsp;sapien vitae purus. Aenean ac&nbsp;massa nec magna.</p>
+                </div>
+                <div class="tools">
+                  <a href="#null">quote</a> |
+                  <a href="#null">reply</a>
+                </div>
+                <div class="meta">
+                  <p class="author"><a href="#null" title="kubasto">kubasto</a></p>
+                  <p class="timestamp">13:53<br />24/08/2010</p>
+                </div>
+              </div>
+              <div class="bottom"><div></div></div>
+            </li>
+            <li class="comment">
+              <div class="top"><div></div></div>
+              <div class="middle">
+                <div class="content">
+                  <blockquote><p>Aenean bibendum vel, semper orci, gravida vitae, placerat ornare a, mauris. Praesent justo. Nulla malesuada.</p></blockquote><p>Vivamus fermentum eget, congue et, nonummy sed, urna.</p>
+                </div>
+                <div class="tools">
+                  <a href="#null">quote</a> |
+                  <a href="#null">reply</a>
+                </div>
+                <div class="meta">
+                  <p class="author"><a href="#null" title="kubasto">kubasto</a></p>
+                  <p class="timestamp">10:31<br />25/08/2010</p>
+                </div>
+              </div>
+              <div class="bottom"><div></div></div>
+            </li>
+            <li class="comment">
+              <div class="top"><div></div></div>
+              <div class="middle">
+                <div class="content">
+                  <p>Nunc a&nbsp;urna. Vestibulum nibh. Aliquam nec elit arcu, pellentesque ipsum primis in&nbsp;quam nulla, at&nbsp;lorem.</p>
+                </div>
+                <div class="tools">
+                  <a href="#null">quote</a> |
+                  <a href="#null">reply</a>
+                </div>
+                <div class="meta">
+                  <p class="author"><a href="#null" title="somebody">somebody</a></p>
+                  <p class="timestamp">02:14<br />26/08/2010</p>
+                </div>
+              </div>
+              <div class="bottom"><div></div></div>
+            </li>
+            <li class="comment">
+              <div class="top"><div></div></div>
+              <div class="middle">
+                <div class="content">
+                  <p>Donec iaculis. Nam dolor sit amet, accumsan ullamcorper massa et&nbsp;ultrices posuere sit amet nunc. Nulla vitae metus. Curabitur fringilla viverra.</p>
+                </div>
+                <div class="tools">
+                  <a href="#null">quote</a> |
+                  <a href="#null">reply</a>
+                </div>
+                <div class="meta">
+                  <img src="schemes/bright-blue/images/avatar.png" alt="" class="avatar" />
+                  <p class="author"><a href="#null" title="author">author</a></p>
+                  <p class="timestamp">07:02<br />27/08/2010</p>
+                </div>
+              </div>
+              <div class="bottom"><div></div></div>
+            </li>
+            <li class="comment">
+              <div class="top"><div></div></div>
+              <div class="middle">
+                <div class="content">
+                  <p>Curabitur nec velit eleifend et, faucibus orci quis tortor.</p><p>Vivamus fermentum eget, congue et, nonummy sed, urna.</p>
+                </div>
+                <div class="tools">
+                  <a href="#null">quote</a> |
+                  <a href="#null">reply</a>
+                </div>
+                <div class="meta">
+                  <img src="schemes/bright-blue/images/avatar.png" alt="" class="avatar" />
+                  <p class="author"><a href="#null" title="author">author</a></p>
+                  <p class="timestamp">06:50<br />28/08/2010</p>
+                </div>
+              </div>
+              <div class="bottom"><div></div></div>
+            </li>
+            <li class="comment level-1">
+              <div class="top"><div></div></div>
+              <div class="middle">
+                <div class="content">
+                  <p>Sed diam tempor ac, augue. Nulla gravida eros sagittis odio id&nbsp;sapien vitae purus. Aenean ac&nbsp;massa nec magna.</p>
+                </div>
+                <div class="tools">
+                  <a href="#null">quote</a> |
+                  <a href="#null">reply</a>
+                </div>
+                <div class="meta">
+                  <p class="author"><a href="#null" title="somebody">somebody</a></p>
+                  <p class="timestamp">11:00<br />29/08/2010</p>
+                </div>
+              </div>
+              <div class="bottom"><div></div></div>
+            </li>
+            <li class="comment level-1">
+              <div class="top"><div></div></div>
+              <div class="middle">
+                <div class="content">
+                  <p>Nunc a&nbsp;urna. Vestibulum nibh. Aliquam nec elit arcu, pellentesque ipsum primis in&nbsp;quam nulla, at&nbsp;lorem.</p>
+                </div>
+                <div class="tools">
+                  <a href="#null">quote</a> |
+                  <a href="#null">reply</a>
+                </div>
+                <div class="meta">
+                  <p class="author"><a href="#null" title="author">author</a></p>
+                  <p class="timestamp">16:55<br />30/08/2010</p>
+                </div>
+              </div>
+              <div class="bottom"><div></div></div>
+            </li>
+            <li class="comment level-2">
+              <div class="top"><div></div></div>
+              <div class="middle">
+                <div class="content">
+                  <p>Lorem ipsum dolor sit amet quam et&nbsp;cursus magna. Integer eu&nbsp;eros. Maecenas blandit suscipit, velit sit.</p>
+                </div>
+                <div class="tools">
+                  <a href="#null">quote</a> |
+                  <a href="#null">reply</a>
+                </div>
+                <div class="meta">
+                  <img src="schemes/bright-blue/images/avatar.png" alt="" class="avatar" />
+                  <p class="author"><a href="#null" title="somebody">somebody</a></p>
+                  <p class="timestamp">22:41<br />31/08/2010</p>
+                </div>
+              </div>
+              <div class="bottom"><div></div></div>
+            </li>
+            <li class="comment level-1">
+              <div class="top"><div></div></div>
+              <div class="middle">
+                <div class="content">
+                  <p>Sed diam tempor ac, augue. Nulla gravida eros sagittis odio id&nbsp;sapien vitae purus. Aenean ac&nbsp;massa nec magna.</p>
+                </div>
+                <div class="tools">
+                  <a href="#null">quote</a> |
+                  <a href="#null">reply</a>
+                </div>
+                <div class="meta">
+                  <p class="author"><a href="#null" title="somebody">somebody</a></p>
+                  <p class="timestamp">22:32<br />01/09/2010</p>
+                </div>
+              </div>
+              <div class="bottom"><div></div></div>
+            </li>
+            <li class="comment">
+              <div class="top"><div></div></div>
+              <div class="middle">
+                <div class="content">
+                  <p>Sed diam tempor ac, augue. Nulla gravida eros sagittis odio id&nbsp;sapien vitae purus. Aenean ac&nbsp;massa nec magna.</p><p>Donec iaculis. Nam dolor sit amet, accumsan ullamcorper massa et&nbsp;ultrices posuere sit amet nunc. Nulla vitae metus. Curabitur fringilla viverra.</p><p>Nunc a&nbsp;urna. Vestibulum nibh. Aliquam nec elit arcu, pellentesque ipsum primis in&nbsp;quam nulla, at&nbsp;lorem.</p>
+                </div>
+                <div class="tools">
+                  <a href="#null">quote</a> |
+                  <a href="#null">reply</a>
+                </div>
+                <div class="meta">
+                  <p class="author"><a href="#null" title="nickname surname">nickname surname</a></p>
+                  <p class="timestamp">16:08<br />02/09/2010</p>
+                </div>
+              </div>
+              <div class="bottom"><div></div></div>
+            </li>
+            <li class="comment">
+              <div class="top"><div></div></div>
+              <div class="middle">
+                <div class="content">
+                  <p>Lorem ipsum dolor sit amet quam et&nbsp;cursus magna. Integer eu&nbsp;eros. Maecenas blandit suscipit, velit sit.</p>
+                </div>
+                <div class="tools">
+                  <a href="#null">quote</a> |
+                  <a href="#null">reply</a>
+                </div>
+                <div class="meta">
+                  <img src="schemes/bright-blue/images/avatar.png" alt="" class="avatar" />
+                  <p class="author"><a href="#null" title="author">author</a></p>
+                  <p class="timestamp">01:31<br />03/09/2010</p>
+                </div>
+              </div>
+              <div class="bottom"><div></div></div>
+            </li>
+            <li class="comment">
+              <div class="top"><div></div></div>
+              <div class="middle">
+                <div class="content">
+                  <p>Donec iaculis. Nam dolor sit amet, accumsan ullamcorper massa et&nbsp;ultrices posuere sit amet nunc. Nulla vitae metus. Curabitur fringilla viverra.</p><p>Sed diam tempor ac, augue. Nulla gravida eros sagittis odio id&nbsp;sapien vitae purus. Aenean ac&nbsp;massa nec magna.</p>
+                </div>
+                <div class="tools">
+                  <a href="#null">quote</a> |
+                  <a href="#null">reply</a>
+                </div>
+                <div class="meta">
+                  <p class="author"><a href="#null" title="author">author</a></p>
+                  <p class="timestamp">06:57<br />04/09/2010</p>
+                </div>
+              </div>
+              <div class="bottom"><div></div></div>
+            </li>
+            <li class="comment-form">
+              <h4>Leave a comment</h4>
+              <form action="" method="post">
+                <p class="input"><input type="text" name="author" />Name*</p>
+                <p class="input"><input type="text" name="email" />EMail*</p>
+                <p class="input"><input type="text" name="url" />WWW</p>
+                <p class="textarea"><textarea name="comment" rows="5" cols="15"></textarea></p>
+                <div class="submit">Submit comment<a title="Submit comment"></a></div>
+                <div class="clear"></div>
+              </form>
+            </li>
+          </ul>
+        </div>
+        <!-- END COMMENTS -->
+
+      </div>
+      <!-- END CONTENT -->
+
+      <!-- BEGIN LOADER -->
+      <div id="loader"></div>
+      <!-- END LOADER -->
+
+    </div>
+    <!-- END WRAPPER -->
+
+  </body>
+  <!-- END BODY -->
+
+</html>

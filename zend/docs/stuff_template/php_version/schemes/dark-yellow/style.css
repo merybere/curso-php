@@ -1,0 +1,162 @@
+/*   
+Theme Name: Stuff
+Scheme Name: Dark Yellow
+*/
+
+/* =Backgrounds
+----------------------------------------------------------------------------- */
+body,
+#menu,
+#menu > .mask > div {
+  background-image: url(images/background.jpg);
+}
+#scheme-switcher {
+  background-image: url(images/schemes-background.png);
+}
+#logo.arrow,
+#logo.arrow > .mask {
+  background-image: url(images/title-arrow.png);
+}
+#nav-menu li {
+  background-image: url(images/nav-menu-separator.png);
+}
+#nav-menu li.search div,
+#image-preloader .search-background {
+  background-image: url(images/search-background.png);
+}
+#nav-menu li.search input[type="submit"],
+#image-preloader .search-submit {
+  background-image: url(images/search-submit.png);
+}
+#nav-menu .arrow,
+#nav-menu .arrow > div {
+  background-image: url(images/nav-menu-arrow.png);
+}
+#loader,
+#image-preloader .loader {
+  background-image: url(images/loader.gif);
+}
+.box,
+.box .container,
+.box .title,
+.box .top,
+.box .bottom {
+  background-image: url(images/box-background.png);
+}
+.box .excerpt .mask {
+  background-image: url(images/excerpt-mask.png);
+}
+.box .more {
+  background-image: url(images/more-background.png);
+}
+.box ul {
+  list-style-image: url(images/list-arrow.png);
+}
+.comment div {
+  background-image: url(images/comment.png);  
+}
+.nivo-directionNav a {
+  background-image: url(images/arrow.png);
+}
+form .submit,
+form .submit > a {
+  background-image: url(images/submit.png);
+}
+form.contact .loader {
+  background-image: url(images/contact-loader.gif);
+}
+form .input {
+  background-image: url(images/input.png);
+}
+form .textarea {
+  background-image: url(images/textarea.png);
+}
+
+/* =Colors
+----------------------------------------------------------------------------- */
+body,
+#menu {
+  background-color: #202020;
+}
+body {
+  color: #848484;
+}
+a {
+  color: #ffe600;
+}
+#nav-menu li a {
+  color: #a5a5a5;
+}
+#nav-menu li a:hover,
+#nav-menu li.current a,
+#nav-menu li a.current {
+  color: #efbc00;
+}
+.box .title h2,
+.box h1 a, .box h2 a, .box h3 a,
+.box h4 a, .box h5 a, .box h6 a {
+  color: #ffe600;
+}
+.box h1 a:hover, .box h2 a:hover, .box h3 a:hover,
+.box h4 a:hover, .box h5 a:hover, .box h6 a:hover {
+  color: #ffe67e;
+}
+.box .meta p,
+.box .meta p a {
+  color: #686868;
+}
+.box .meta p a:hover{
+  color: #fff;
+}
+.box .title h2 span,
+.box .meta p.comments-count,
+.box .meta p.comments-count a,
+.box .meta p.website,
+.box .meta p.website a,
+.box .nav-page a.current,
+.box h1, .box h2, .box h3,
+.box h4, .box h5, .box h6,
+.highlight {
+  color: #eba800;
+}
+.box .meta p.comments-count a:hover,
+.box .meta p.website a:hover {
+  color: #fbd30c;
+}
+.box .meta p.author a {
+  color: #9c9c9c;
+}
+.box .thumbnail.video {
+  background-color: #111;
+}
+.box .more {
+  border-color: #171717;
+  color: #ffef2a;
+}
+.box .more:hover {
+  color: #ffef2a;
+}
+.box th {
+  background-color: #252525;
+}
+.box td {
+  background-color: #1a1a1a;
+}
+.box img, blockquote, pre {
+  border-color: #2b2b2b;
+}
+.box hr {
+  border-color: #2b2b2b;
+}
+.comment .timestamp {
+  color: #595959;
+}
+.comment-form p.input {
+  color: #5c5c5c;
+}
+form p, input, textarea {
+  color: #5c5c5c;
+}
+form .submit {
+  color: #ffef2a;
+}

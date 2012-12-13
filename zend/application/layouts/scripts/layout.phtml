@@ -15,25 +15,38 @@
     </div>
     <div id="header-navigation" style="float: right">
         <a href="<?php echo $this->url(
+            array('controller'=>'index'),
+            'default',
+            true) ?>">Index</a>
+            
+        <a href="<?php echo $this->url(
             array('controller'=>'guestbook'),
             'default',
             true) ?>">Guestbook</a>
+            
         <a href="<?php echo $this->url(
             array('controller'=>'album'),
             'default',
             true) ?>">Album</a>
-        <a href="<?php echo $this->url(
-            array('controller'=>'index'),
-            'default',
-            true) ?>">Index</a>
+            
         <a href="<?php echo $this->url(
             array('controller'=>'pet'),
             'default',
             true) ?>">Pet</a>
+            
         <a href="<?php echo $this->url(
             array('controller'=>'language'),
             'default',
             true) ?>">Language</a>
+            
+        <a href="<?php echo $this->url(
+            array('controller'=>'user'),
+            'default',
+            true) ?>">User</a>
+        <a href="<?php echo $this->url(
+            array('controller'=>'user', 'action' => 'logout'),
+            'default',
+            true) ?>">Logout</a>
     </div>
 </div>
 
