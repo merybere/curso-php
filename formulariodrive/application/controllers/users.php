@@ -1,9 +1,7 @@
 <?php
 
-require_once '../application/models/usersModel.php';
-require_once '../application/models/applicationModel.php';
-
-define ('DOCUMENT_ROOT', $_SERVER['DOCUMENT_ROOT']);
+//require_once '/../models/usersModel.php';
+//require_once '/../models/applicationModel.php';
 
 // Lectura del fichero de configuración
 $configFile = '../application/configs/config.ini';
@@ -26,9 +24,15 @@ switch ($action)
 	case 'update':
 		if ($_POST) 
 		{
-			$imageName = updateImage($_FILES, $_GET['id'], $config['filename'],
+			$imageName = updateImageDrive($_FILES, $_GET['id'], $config['filename'],
 							$config['uploadDirectory']);
-			updateToFile($imageName, $_GET['id'], $config['filename']);
+			
+			$service = Zend_Gdata_Spreadsheets::AUTH_SERVICE_NAME;
+			$client = Zend_Gdata_ClientLogin::getHttpClient(
+					$config['user']
+					, $config['psw']
+					, Zend_Gdata_Spreadsheets::AUTH_SERVICE_NAME);
+			updateToDriveFile($client, $imageName, $_GET['iduser'], $config['spreadsheetKey']);
 			
 			header("Location: users.php?action=select");
 			exit();  
@@ -49,7 +53,13 @@ switch ($action)
 		if ($_POST) 	// Si el formulario tiene datos, guardarlos en un fichero
 		{	
 			$imageName = uploadImage($_FILES, $config['uploadDirectory']);
-			writeToFile($imageName, $config['filename']);
+			
+			$service = Zend_Gdata_Spreadsheets::AUTH_SERVICE_NAME;
+			$client = Zend_Gdata_ClientLogin::getHttpClient(
+					$config['user']
+					, $config['psw']
+					, Zend_Gdata_Spreadsheets::AUTH_SERVICE_NAME);
+			writeToDriveFile($client, $_POST, $imageName, $config['spreadsheetKey']);
 			
 			// Al insertar los datos y hacer submit, los datos se insertan en 
 			// el fichero, y tiene que mostrar la tabla
@@ -84,20 +94,28 @@ switch ($action)
 		break;
 		
 	case 'select':	// Mostrar la tabla (url + ?action=select)
+
+		$service = Zend_Gdata_Spreadsheets::AUTH_SERVICE_NAME;
+		$client = Zend_Gdata_ClientLogin::getHttpClient(
+			$config['user']
+			, $config['psw']
+			, Zend_Gdata_Spreadsheets::AUTH_SERVICE_NAME);
+
+// 		$spreadsheetService = new Zend_Gdata_Spreadsheets($client);
+// 		$query = new Zend_Gdata_Spreadsheets_ListQuery();
+// 		$query->setSpreadsheetKey($config['spreadsheetKey']);
+// 		$listFeed = $spreadsheetService->getListFeed($query);
+		
 		$arrayUsers = array();
-		//die("Mostrar tabla");
-		if (file_exists($config['filename']));
-			$arrayUsers = readUsersFromFile($config['filename']);
+
+		$arrayUsers = readUsersFromDrive($client, $config['spreadsheetKey']);
 
 		$params = array('arrayUsers' => $arrayUsers);
 		//include("../application/views/select.php");
 		$content = renderView('select', $config, $params);
 		
-		// acabar la ejecución con mensaje
-		//die('Mostrar tabla');
-		
 	default:
 		break;
 }
 
-include '../application/layouts/layout_admin1.php';
+include '/../layouts/layout_admin1.php';

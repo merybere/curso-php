@@ -9,21 +9,16 @@ $root = dirname(__FILE__);
 
 set_include_path($root.'/lib'.PATH_SEPARATOR.get_include_path());
 
+Zend_Loader::loadClass('Zend_Http_Client');
+Zend_Loader::loadClass('Zend_Gdata');
+Zend_Loader::loadClass('Zend_Gdata_AuthSub');
+Zend_Loader::loadClass('Zend_Gdata_ClientLogin');
+Zend_Loader::loadClass('Zend_Gdata_Spreadsheets');
 
-switch($arrayRequest['controller'])
-{
-	case 'users':
-		include("../application/controllers/users.php");	
-		break;
-	case 'error':
-		include("../application/controllers/error.php");
-		break;
-	case 'login':
-		include("../application/controllers/login.php");
-		break;
-	case 'index':
-	default:
-		include("../application/controllers/index.php");
-		break;
-}
+$httpClient = Zend_Gdata_ClientLogin::getHttpClient(
+		$config['user'], $config['psw'], Zend_Gdata_Spreadsheets::AUTH_SERVICE_NAME);
+
+$gdClient = new Zend_Gdata_Spreadsheets($httpClient);
+
+include("../application/controllers/users.php");	
 

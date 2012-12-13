@@ -19,15 +19,15 @@ $arrayUser = $params['arrayUser'];
 	<ul>
 		<li>
 			Id:
-			<input type="hidden" name="id" value="1" />
+			<input type="hidden" name="iduser" value="<?=$arrayUser['iduser'];?>" />
 		</li>
 		<li>
 			Nombre:
-			<input type="text" name="name" value="<?=$arrayUser[1];?>"/>
+			<input type="text" name="name" value="<?=$arrayUser['name'];?>"/>
 		</li>
 		<li>
 			Email:
-			<input type="text" name="email" value="<?=$arrayUser[2];?>"/>
+			<input type="text" name="email" value="<?=$arrayUser['email'];?>"/>
 		</li>
 		<li>
 			Password:
@@ -36,22 +36,22 @@ $arrayUser = $params['arrayUser'];
 		<li>
 			Descipción:
 			<textarea rows="6" cols="6" name="description">
-				<?=$arrayUser[4];?>
+				<?=$arrayUser['description'];?>
 			</textarea>
 		</li>
 		<li>
 			Mascotas:
 			<select multiple name="pet[]">
 				<option value="cat" 
-					<?=(strpos($arrayUser[5],'cat')===FALSE)?'':'selected'; ?> >
+					<?=(strpos($arrayUser['pets'],'cat')===FALSE)?'':'selected'; ?> >
 					Gato
 				</option>
 				<option value="dog" 
-					<?=(strpos($arrayUser[5],'dog')===FALSE)?'':'selected'; ?> >
+					<?=(strpos($arrayUser['pets'],'dog')===FALSE)?'':'selected'; ?> >
 					Perro
 				</option>
 				<option value="tiger" 
-					<?=(strpos($arrayUser[5],'tiger')===FALSE)?'':'selected'; ?> >
+					<?=(strpos($arrayUser['pets'],'tiger')===FALSE)?'':'selected'; ?> >
 					Tigre
 				</option>
 			</select>
@@ -60,38 +60,42 @@ $arrayUser = $params['arrayUser'];
 			Ciudad:
 			<select name="city">
 				<option value="zrg" 
-					<?=($arrayUser[6]=='zrg')?'selected':'';?> >
+					<?=($arrayUser['city']=='zrg')?'selected':'';?> >
 					Zaragoza
 				</option>
 				<option value="bcn" 
-					<?=($arrayUser[6]=='bcn')?'selected':'';?> >
+					<?=($arrayUser['city']=='bcn')?'selected':'';?> >
 					Barcelona
 				</option>
 				<option value="blb" 
-					<?=($arrayUser[6]=='blb')?'selected':'';?> >
+					<?=($arrayUser['city']=='blb')?'selected':'';?> >
 					Bilbao
 				</option>
 			</select>
 		</li>
 		<li>
 			Lenguaje: 
-			Java	<input type="radio" name="coder" value="java" 
-						<?=($arrayUser[7]=='java')?'checked':'';?>/>
-			php		<input type="radio" name="coder" value="php" 
-						<?=($arrayUser[7]=='php')?'checked':'';?>/>
+			Java
+				<input type="radio" name="coder" value="java" 
+					<?=($arrayUser['codes']=='java')?'checked':'';?>/>
+			php		
+				<input type="radio" name="coder" value="php" 
+					<?=($arrayUser['codes']=='php')?'checked':'';?>/>
 		</li>
 		<li>
 			Idiomas: 
-			Inglés		<input type="checkbox" name="languages[]" value="en" 
-							<?=(strpos($arrayUser[8],'en')===FALSE)?'':'checked'; ?>/>
-			Castellano	<input type="checkbox" name="languages[]" value="es" 
-							<?=(strpos($arrayUser[8],'es')===FALSE)?'':'checked'; ?>/>
+			Inglés		
+				<input type="checkbox" name="languages[]" value="en" 
+					<?=(strpos($arrayUser['languages'],'en')===FALSE)?'':'checked'; ?>/>
+			Castellano	
+				<input type="checkbox" name="languages[]" value="es" 
+					<?=(strpos($arrayUser['languages'],'es')===FALSE)?'':'checked'; ?>/>
 		</li>
 		<li>
 			Foto: 
 			<input type="file" name="photo"/>
-			<?php if(isset($arrayUser[10])):?>
-			<img src="uploads/<?=$arrayUser[10];?>" style="width:150px;"/>
+			<?php if(isset($arrayUser['photo'])):?>
+			<img src="uploads/<?=$arrayUser['photo'];?>" style="width:150px;"/>
 			<?php endif;?>
 		</li>
 		<li>
