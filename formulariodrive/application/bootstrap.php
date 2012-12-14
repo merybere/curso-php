@@ -6,7 +6,7 @@ $config = readConfig('../application/configs/config.ini', APPLICATION_ENV);
 session_start();
 
 $root = dirname(__FILE__);
-
+require_once 'Zend/Loader.php';
 set_include_path($root.'/lib'.PATH_SEPARATOR.get_include_path());
 
 Zend_Loader::loadClass('Zend_Http_Client');

@@ -145,10 +145,19 @@ function readUserFromFile($line, $filename)
  * @param string $filename
  * @return array: User array
  */
-function readUser($id, $filename)
+function readUserFromDrive($iduser, $client, $filekey)
 {
-	$textUser = readUserFromFile($id, $filename);
-	$arrayUser = explode('|', $textUser);
+	$service = new Zend_Gdata_Spreadsheets($client);
+	
+	$query = new Zend_Gdata_Spreadsheets_ListQuery();
+	$query->setSpreadsheetKey($filekey);
+	$query->setSpreadsheetQuery('iduser=' . $iduser);
+	$listFeed = $service->getListFeed($query);
+	
+	$userRow = $service->getListEntry($listFeed);
+	foreach($userRow->getCustom() as $column)
+		$arrayUser[$column->getColumnName()] = $column->getText();
+	
 	return $arrayUser;
 }
 
@@ -180,9 +189,10 @@ function initArrayUser()
  * @param int $id
  * @param string $filename
  */
-function updateToDriveFile($client, $imageName, $iduser, $key)
+function updateToDriveFile($client, $imageName, $iduser, $filekey)
 {
 	$arrayUsers = readUsersFromDrive($client, $filekey);
+	_debug($arrayUsers);die;
 	
 	foreach($arrayUsers as $key => $value) 
 	{

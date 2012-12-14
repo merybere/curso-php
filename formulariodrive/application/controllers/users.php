@@ -22,16 +22,17 @@ $arrayUser = initArrayUser();
 switch ($action)
 {
 	case 'update':
+		$service = Zend_Gdata_Spreadsheets::AUTH_SERVICE_NAME;
+		$client = Zend_Gdata_ClientLogin::getHttpClient(
+				$config['user']
+				, $config['psw']
+				, Zend_Gdata_Spreadsheets::AUTH_SERVICE_NAME);
+		
 		if ($_POST) 
 		{
 			$imageName = updateImageDrive($_FILES, $_GET['id'], $config['filename'],
 							$config['uploadDirectory']);
 			
-			$service = Zend_Gdata_Spreadsheets::AUTH_SERVICE_NAME;
-			$client = Zend_Gdata_ClientLogin::getHttpClient(
-					$config['user']
-					, $config['psw']
-					, Zend_Gdata_Spreadsheets::AUTH_SERVICE_NAME);
 			updateToDriveFile($client, $imageName, $_GET['iduser'], $config['spreadsheetKey']);
 			
 			header("Location: users.php?action=select");
@@ -39,8 +40,9 @@ switch ($action)
 		} 
 		else 	// Si no hay post, mostrar el formulario
 		{	
+			
 			//Leer los datos del usuario
-			$arrayUser = readUser($_GET['id'], $config['filename']);
+			$arrayUser = readUserFromDrive($_GET['id'], $client, $config['spreadsheetKey']);
 			
 			// Mostrar el formulario vacío
 			//include("../application/views/formulario.php");
